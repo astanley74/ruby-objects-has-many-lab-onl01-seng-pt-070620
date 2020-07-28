@@ -7,6 +7,9 @@ class Author
     @name = name
     @posts = []
   end
+  
+  def posts
+    Appointment.all.select {|appointment| appointment.doctor == self}
 
   
   def add_post(post)
