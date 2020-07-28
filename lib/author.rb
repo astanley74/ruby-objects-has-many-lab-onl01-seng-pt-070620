@@ -9,7 +9,7 @@ class Author
   end
   
   def posts
-    Appointment.all.select {|appointment| appointment.doctor == self}
+    Post.all.select {|post| post.Author == self}
 
   
   def add_post(post)
